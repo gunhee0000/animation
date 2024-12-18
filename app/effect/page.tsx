@@ -22,7 +22,7 @@ function AnimatedNumberReactSpring({ value }: { value: number }) {
 
   useEffect(() => {
     api.start({ number: value });
-  }, [value]);
+  }, [api, value]);
 
   return (
     <animated.span>

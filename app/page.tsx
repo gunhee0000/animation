@@ -3,6 +3,7 @@
 import { useRouter } from 'next/navigation';
 
 export default function App() {
+
   const router = useRouter();
 
   const handleRouter = (link: string) => () => {
@@ -15,13 +16,13 @@ export default function App() {
         className="w-[100px] h-10 border border-white"
         onClick={handleRouter('spring')}
       >
-        spring
+        click
       </button>
       <button
         className="w-[100px] h-10 border border-white"
         onClick={handleRouter('effect')}
       >
-        effect
+        number
       </button>
       <button
         className="w-[100px] h-10 border border-white"
@@ -33,7 +34,19 @@ export default function App() {
         className="w-[100px] h-10 border border-white"
         onClick={handleRouter('motion-test')}
       >
-        motion test
+        drag
+      </button>
+      <button
+        className="w-[100px] h-10 border border-white"
+        onClick={handleRouter('motion')}
+      >
+        damping
+      </button>
+      <button
+        className="w-[100px] h-10 border border-white"
+        onClick={handleRouter('motionScroll')}
+      >
+        circle
       </button>
     </div>
   );
